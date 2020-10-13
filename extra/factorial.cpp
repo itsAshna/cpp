@@ -1,20 +1,15 @@
-#include <iostream>
-using namespace std;
-
-int fact(int n)
-{
-  if (n == 0)
-  {
-    return 1;
-  }
-  return n * fact(n - 1);
-}
+#include<stdio.h>
 int main()
 {
-  int n;
-  cout << "ENTER A NUMBER";
-  cin >> n;
-  cout << endl
-       << "FACTORIAL: " << fact(n) << endl;
+  int i, n, fact = 1;
+ 
+  printf("Enter a number to calculate its factorial\n");
+  scanf("%d", &n);
+ 
+  for (i = 1; i <= n; i++)
+    fact = fact * i;
+ 
+  printf("Factorial of %d = %d\n", n, fact);
+ 
   return 0;
 }
